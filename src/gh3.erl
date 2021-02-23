@@ -22,7 +22,12 @@ to_polyfills(
     #{<<"type">> := <<"MultiPolygon">>, <<"coordinates">> := Coordinates},
     Resolution
 ) ->
-    geojson_parse_polygons(Coordinates, Resolution).
+    geojson_parse_polygons(Coordinates, Resolution);
+to_polyfills(
+    #{<<"type">> := <<"Polygon">>, <<"coordinates">> := Coordinates},
+    Resolution
+) ->
+    h3:polyfill(geojson_parse_polygon(Coordinates), Resolution).
 
 geojson_parse_polygons(Polygons, Resolution) ->
     lists:map(
