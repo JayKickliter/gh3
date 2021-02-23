@@ -18,7 +18,7 @@ Sorted = lists:sort(fun(A, B) -> h3:get_resolution(A) < h3:get_resolution(B) end
 
 ### Membership tests
 
-The functionality in this section is all provided by [`herlang-h3`].
+The functionality in this section is all provided by [`erlang-h3`].
 
 ```erl
 DairyIsle = h3:from_geo({37.96648742360273, -91.36002165669227}, 12),
