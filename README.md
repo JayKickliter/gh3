@@ -45,7 +45,7 @@ ok = file:write_file("usa.reconstructed.json", NewJSONb),
 $ tokml usa.reconstructed.json > usa_hexagons.kml
 ```
 
-[![usa_h3_res7](https://user-images.githubusercontent.com/2551201/108751085-a42b2580-74f6-11eb-95bf-9fafa5c088f4.png)](https://www.google.com/maps/d/u/0/viewer?hl=en&mid=1y5R6LfUvqWovkH9ln0GOX3Q3UM1gDoEg&ll=56.00475824195842%2C-113.44115859990532&z=3)
+[![usa_h3_res7](https://user-images.githubusercontent.com/2551201/108751085-a42b2580-74f6-11eb-95bf-9fafa5c088f4.png)](https://www.google.com/maps/d/u/0/viewer?hl=en&mid=1bkba4TajlAE3A8YcA647gJDAw80mtVMN&ll=9.618532832074589%2C-127.25061195&z=2)
 
 
 [`tokml`]: https://github.com/mapbox/tokml
