@@ -15,8 +15,14 @@
 -spec to_polyfills(JSON :: map(), Resolution :: h3:resolution()) ->
     [[h3:h3index(), ...], ...].
 to_polyfills(#{<<"features">> := Features}, Resolution) ->
-    to_polyfills(Features, Resolution);
-to_polyfills([#{<<"geometry">> := Geometry} | _], Resolution) ->
+    lists:map(
+        fun (Feature) ->
+            io:format("~p\r\n", [maps:get(<<"properties">>, Feature)]),
+            to_polyfills(Feature, Resolution)
+        end,
+        Features
+    );
+to_polyfills(#{<<"geometry">> := Geometry}, Resolution) ->
     to_polyfills(Geometry, Resolution);
 to_polyfills(
     #{<<"type">> := <<"MultiPolygon">>, <<"coordinates">> := Coordinates},
