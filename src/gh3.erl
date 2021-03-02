@@ -17,7 +17,6 @@
 to_polyfills(#{<<"features">> := Features}, Resolution) ->
     lists:map(
         fun (Feature) ->
-            io:format("~p\r\n", [maps:get(<<"properties">>, Feature)]),
             to_polyfills(Feature, Resolution)
         end,
         Features
