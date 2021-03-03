@@ -1,7 +1,7 @@
 {"1.1.0",
 [{<<"h3">>,
   {git,"https://github.com/helium/erlang-h3.git",
-       {ref,"ff992646bb076d1a0b99e991ba14b729ed792c0c"}},
+       {ref,"0c7e60266320456e0adacde16702d48b07a0ecec"}},
   0},
  {<<"jsx">>,{pkg,<<"jsx">>,<<"3.0.0">>},0}]}.
 [
